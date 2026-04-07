@@ -1,0 +1,13 @@
+# Python backend
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+env/
+
+# Node frontend
+node_modules/
+dist/
+npm-debug.log
+.DS_Store
