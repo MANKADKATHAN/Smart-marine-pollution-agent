@@ -20,7 +20,8 @@ function App() {
         urlParams.append('location', location)
         if (emailRef.current) urlParams.append('email', emailRef.current)
 
-        const response = await fetch(`http://localhost:8000/analyze?${urlParams.toString()}`)
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const response = await fetch(`${API_URL}/analyze?${urlParams.toString()}`)
         if (!response.ok) throw new Error('Failed to fetch data')
         const result = await response.json()
         

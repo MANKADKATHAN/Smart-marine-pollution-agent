@@ -12,7 +12,7 @@ app = FastAPI(title="Smart Marine Pollution Alert System (AI Powered)")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://smart-marine-pollution-agent.vercel.app/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
