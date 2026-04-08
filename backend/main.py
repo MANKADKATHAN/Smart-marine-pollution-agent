@@ -153,3 +153,4 @@ async def get_prediction():
         "trend_analysis": trend,
         "future_predictions": predictions
     }
+    
