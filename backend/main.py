@@ -3,7 +3,6 @@ from pydantic import BaseModel
 import random
 import datetime
 import os
-from dotenv import load_dotenv
 import aiosmtplib
 from email.message import EmailMessage
 from fastapi.middleware.cors import CORSMiddleware
@@ -30,7 +29,6 @@ class AnalysisResult(BaseModel):
     action_taken: list[str]
 
 # Load environment variables
-load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 EMAIL_USER = os.getenv("EMAIL_USER")
 EMAIL_PASS = os.getenv("EMAIL_PASS")
 
@@ -153,4 +151,3 @@ async def get_prediction():
         "trend_analysis": trend,
         "future_predictions": predictions
     }
-    
